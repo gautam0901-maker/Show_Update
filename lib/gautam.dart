@@ -77,47 +77,37 @@ class check extends StatelessWidget {
                                           fontWeight: FontWeight.w500,
                                         ),),
                                     ),
+                             SizedBox(height: 10,),
                              Padding(
-                               padding: const EdgeInsets.only(top: 20),
+                               padding: const EdgeInsets.only(left: 10),
                                child: Row(
+                                 mainAxisAlignment: MainAxisAlignment. center,
                                  children: <Widget>[
-                                   Center(child: Text('A New version of the App is available',
-                                   overflow: TextOverflow.ellipsis,
-                                     maxLines: 2,
-                                     style: TextStyle(
-                                     fontSize: 20,
-                                       color: Colors.white
-                                   ),
-                                   ),
-
-                                    )
+                                   Container(
+                                     width : 300,
+                                     child: Text('A New version of the App is available   Click "Update" to install it',
+                                     overflow: TextOverflow.ellipsis,
+                                       maxLines: 5,
+                                       style: TextStyle(
+                                       fontSize: 16,
+                                         color: Colors.white
+                                     ),
+                                     ),
+                                   )
                                  ],
                                ),
                              ),
+
+                             SizedBox(height: 20,),
                                     Row(
+                                      mainAxisAlignment: MainAxisAlignment. center,
                                       children: <Widget>[
-                                        Center(child: Text('Please Click update to install it',
-                                          overflow: TextOverflow.ellipsis,
-                                          maxLines: 2,
-                                          style: TextStyle(
-                                            fontSize: 20,
-                                            color: Colors.white
-                                          ),
-                                        ),
+                                        ButtonTheme(
 
-                                        )
-                                      ],
-                                    ),
-
-                             SizedBox(height: 10,),
-                                    Padding(
-                                      padding: const EdgeInsets.all(30),
-                                      child: Row(
-                                        children: <Widget>[
-                                          ButtonTheme(
-
-                                            height: 40,
-                                            minWidth: 40,
+                                          height: 30,
+                                          minWidth: 50,
+                                          child: Padding(
+                                            padding: const EdgeInsets.only(right: 20),
                                             child: RaisedButton(
                                               color: Colors.grey,
                                               shape: RoundedRectangleBorder(),
@@ -127,43 +117,41 @@ class check extends StatelessWidget {
                                                   CupertinoPageRoute(builder: (context) => whatsnew()),
                                                 );
                                               },
-                                              child: Text("What's New ?",
+                                              child: Text("What's New?",
                                                 style: TextStyle(
-                                                  fontSize: 20,
+                                                  fontSize: 17,
                                                   fontWeight: FontWeight.bold,
                                                   color: Colors.white,
                                                 ),
                                               ),
                                             ),
                                           ),
-                                          Padding(
-                                            padding: const EdgeInsets.only(left: 15),
-                                            child: ButtonTheme(
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.only(left: 15),
+                                          child: ButtonTheme(
 
-                                              height: 45,
-                                              minWidth: 20,
-                                              child: Align(
-                                                alignment: Alignment.center,
-                                                child: RaisedButton(
-                                                  color: Colors.blue,
-                                                  shape: RoundedRectangleBorder(),
-                                                  onPressed: () async{
-                                                    _launchURL();
-                                                  },
-                                                  child: Text("Update",
-                                                    style: TextStyle(
-                                                      fontSize: 20,
-                                                      fontWeight: FontWeight.bold,
-                                                      color: Colors.white,
-                                                    ),
-                                                  ),
+                                            height: 30,
+                                            minWidth: 120,
+                                            child: RaisedButton(
+                                              color: Colors.blue,
+                                              shape: RoundedRectangleBorder(),
+                                              onPressed: () async{
+                                                _launchURL();
+                                              },
+                                              child: Text("Update",
+                                                style: TextStyle(
+                                                  fontSize: 17,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.white,
                                                 ),
                                               ),
                                             ),
                                           ),
-                                        ],
+                                        ),
 
-                                      ),
+                                      ],
+
                                     ),
 
                                   ],
