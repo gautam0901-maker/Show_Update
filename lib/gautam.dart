@@ -2,7 +2,7 @@ import 'package:external_app_launcher/external_app_launcher.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:launch_review/launch_review.dart';
-import 'package:showupdate/InsidePage.dart';
+import 'package:showupdate/whatsnew.dart';
 import 'package:url_launcher/url_launcher.dart';
 const _url = 'https://play.google.com/store/apps/details?id=com.kloudlearn.assistant&hl=en_IN&gl=US';
 const _url2 = 'https://apps.apple.com/kw/app/kloudlearn/id1572038551';
@@ -33,110 +33,150 @@ class check extends StatelessWidget {
                   )
               ),
             ],
-backgroundColor: Colors.red,
+            backgroundColor: Colors.red,
           ),
-          backgroundColor: Colors.white,
-          body: Column(
-
-            children: <Widget>[
-              Row(
-                children: <Widget>[
-                  Container(
-                    width: MediaQuery.of(context).size.width,
-                    height: 100,
-                    decoration: BoxDecoration
-                      (
-                      image: DecorationImage(
-                        fit: BoxFit.fill,
-                        image: AssetImage('images/kloudlearn1.png'),
-                      ),
-                    ),
-
-                  ),
-
-                ],
-              ),
-              SizedBox(
-                height: 50,
-                width: 24,
-              ),
-              Column(
-                children: [
-              Row(
-                children: <Widget>[
-                  SizedBox(width: 25,)
-                ],
-              ),
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text('Your App is not up-to-date',
-                      style: TextStyle(
-                          fontSize: 50,
-                        fontWeight: FontWeight.w300,
-                      ),),
-                  ),
-                ],
-              ),
-              SizedBox(height: 40,),
-              Column(
-                children: <Widget>[
-
-                  Row(
+          backgroundColor: Colors.indigo,
+          body:  Column(
                     children: <Widget>[
+                      SizedBox(height: 50,),
                       Padding(
-                        padding: EdgeInsets.all(0),
-                        child:ButtonTheme(
-
-                          height: 50,
-                          minWidth: 200,
-                          child: Align(
-                            alignment: Alignment.centerLeft,
-                            child: RaisedButton(
-                              color: Colors.red,
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(30)),
-                              onPressed: () async {
-                                _launchURL();
-                              },
-                              child: Text("Update",
-                               style: TextStyle(
-                                 fontSize: 30,
-                                 fontWeight: FontWeight.w400,
-                               ),
-                               ),
+                        padding: EdgeInsets.only(bottom: 2.0),
+                        child: Container(
+                          width: 150,
+                          height: 150,
+                          decoration: BoxDecoration
+                            (
+                            image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: AssetImage('images/kl2.png'),
                             ),
                           ),
                         ),
-                        /*ElevatedButton(
-                          style: ButtonStyle(
-                            shape: MaterialStateProperty.all(CircleBorder()),
-                            padding: MaterialStateProperty.all(EdgeInsets.all(40)),
-                            backgroundColor: MaterialStateProperty.all(Colors.blue), // <-- Button color
-                          ),
-                          onPressed: ()async {
-                          _launchURL();
-                          },
-                          child: Text(
-                            'Update',
-                            style: TextStyle(
-                                fontSize: 24,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white
+                      ),
+                      Align(
+                        alignment: Alignment.bottomCenter,
+                        child: Column(
+                          children: [
+                            Row(
+                              children: <Widget>[
+                                SizedBox(height: 220,)
+                              ],
                             ),
-                          ),
-                        ),*/
+                            Padding(
+                              padding: const EdgeInsets.all(20),
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Column(
+                                  children: [
+                                    Align(
+                                      alignment: Alignment.bottomCenter,
+                                      child: Text('Update Available',
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 26,
+                                          fontWeight: FontWeight.w500,
+                                        ),),
+                                    ),
+                             Padding(
+                               padding: const EdgeInsets.only(top: 20),
+                               child: Row(
+                                 children: <Widget>[
+                                   Center(child: Text('A New version of the App is available',
+                                   overflow: TextOverflow.ellipsis,
+                                     maxLines: 2,
+                                     style: TextStyle(
+                                     fontSize: 20,
+                                       color: Colors.white
+                                   ),
+                                   ),
+
+                                    )
+                                 ],
+                               ),
+                             ),
+                                    Row(
+                                      children: <Widget>[
+                                        Center(child: Text('Please Click update to install it',
+                                          overflow: TextOverflow.ellipsis,
+                                          maxLines: 2,
+                                          style: TextStyle(
+                                            fontSize: 20,
+                                            color: Colors.white
+                                          ),
+                                        ),
+
+                                        )
+                                      ],
+                                    ),
+
+                             SizedBox(height: 10,),
+                                    Padding(
+                                      padding: const EdgeInsets.all(30),
+                                      child: Row(
+                                        children: <Widget>[
+                                          ButtonTheme(
+
+                                            height: 40,
+                                            minWidth: 40,
+                                            child: RaisedButton(
+                                              color: Colors.grey,
+                                              shape: RoundedRectangleBorder(),
+                                              onPressed: () async {
+                                                Navigator.push(
+                                                  context,
+                                                  CupertinoPageRoute(builder: (context) => whatsnew()),
+                                                );
+                                              },
+                                              child: Text("What's New ?",
+                                                style: TextStyle(
+                                                  fontSize: 20,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.white,
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding: const EdgeInsets.only(left: 15),
+                                            child: ButtonTheme(
+
+                                              height: 45,
+                                              minWidth: 20,
+                                              child: Align(
+                                                alignment: Alignment.center,
+                                                child: RaisedButton(
+                                                  color: Colors.blue,
+                                                  shape: RoundedRectangleBorder(),
+                                                  onPressed: () async{
+                                                    _launchURL();
+                                                  },
+                                                  child: Text("Update",
+                                                    style: TextStyle(
+                                                      fontSize: 20,
+                                                      fontWeight: FontWeight.bold,
+                                                      color: Colors.white,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+
+                                      ),
+                                    ),
+
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ],
-
                   ),
-
-                ],
-              )
-            ],
-
-          )
-      ),
-    );
+          ),
+              );
   }
 }
 void _launchURL() async {
