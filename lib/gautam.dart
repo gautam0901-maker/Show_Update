@@ -14,31 +14,11 @@ class check extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-          appBar: AppBar(
-            iconTheme: IconThemeData(
-              color: Colors.white
-            ),
-            actions: <Widget>[
-              Padding(
-                  padding: EdgeInsets.only(right: 20.0),
-                  child: GestureDetector(
-                    onTap: () {
-                      Navigator.of(context).pop();
 
-                    },
-                    child: Icon(
-                        Icons.close,
-                    color: Colors.black,
-                    ),
-                  )
-              ),
-            ],
-            backgroundColor: Colors.red,
-          ),
           backgroundColor: Colors.indigo,
           body:  Column(
                     children: <Widget>[
-                      SizedBox(height: 50,),
+                      SizedBox(height: 100,),
                       Padding(
                         padding: EdgeInsets.only(bottom: 2.0),
                         child: Container(
@@ -59,7 +39,7 @@ class check extends StatelessWidget {
                           children: [
                             Row(
                               children: <Widget>[
-                                SizedBox(height: 220,)
+                                SizedBox(height: 150,)
                               ],
                             ),
                             Padding(
