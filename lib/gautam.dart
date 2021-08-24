@@ -53,32 +53,54 @@ class check extends StatelessWidget {
                                       child: Text('Update Available',
                                         style: TextStyle(
                                           color: Colors.white,
-                                          fontSize: 26,
-                                          fontWeight: FontWeight.w500,
+                                          fontSize: 23,
+                                          fontWeight: FontWeight.w400,
                                         ),),
                                     ),
-                             SizedBox(height: 10,),
+                             SizedBox(height: 30,),
                              Padding(
-                               padding: const EdgeInsets.only(left: 10),
+                               padding: const EdgeInsets.only(left: 0),
                                child: Row(
                                  mainAxisAlignment: MainAxisAlignment. center,
                                  children: <Widget>[
                                    Container(
                                      width : 300,
-                                     child: Text('A New version of the App is available   Click "Update" to install it',
-                                     overflow: TextOverflow.ellipsis,
-                                       maxLines: 5,
-                                       style: TextStyle(
-                                       fontSize: 16,
-                                         color: Colors.white
-                                     ),
+                                     child: Align(
+                                       child: Text('A new version of the app is available. Click ',
+                                       overflow: TextOverflow.ellipsis,
+                                         maxLines: 5,
+                                         style: TextStyle(
+                                         fontSize: 13,
+                                           color: Colors.white
+                                       ),
+                                       ),
                                      ),
                                    )
                                  ],
                                ),
                              ),
-
-                             SizedBox(height: 20,),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 5),
+                                      child: Row(
+                                        mainAxisAlignment: MainAxisAlignment. center,
+                                        children: <Widget>[
+                                          Container(
+                                            width : 300,
+                                            child: Align(
+                                              child: Text('"update" to install it ',
+                                                overflow: TextOverflow.ellipsis,
+                                                maxLines: 5,
+                                                style: TextStyle(
+                                                    fontSize: 13,
+                                                    color: Colors.white
+                                                ),
+                                              ),
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                    SizedBox(height: 20,),
                                     Row(
                                       mainAxisAlignment: MainAxisAlignment. center,
                                       children: <Widget>[
@@ -87,7 +109,7 @@ class check extends StatelessWidget {
                                           height: 30,
                                           minWidth: 50,
                                           child: Padding(
-                                            padding: const EdgeInsets.only(right: 20),
+                                            padding: const EdgeInsets.only(right: 17),
                                             child: RaisedButton(
                                               color: Colors.grey,
                                               shape: RoundedRectangleBorder(),
@@ -99,7 +121,7 @@ class check extends StatelessWidget {
                                               },
                                               child: Text("What's New?",
                                                 style: TextStyle(
-                                                  fontSize: 17,
+                                                  fontSize: 19,
                                                   fontWeight: FontWeight.bold,
                                                   color: Colors.white,
                                                 ),
@@ -108,7 +130,7 @@ class check extends StatelessWidget {
                                           ),
                                         ),
                                         Padding(
-                                          padding: const EdgeInsets.only(left: 15),
+                                          padding: const EdgeInsets.only(left: 12),
                                           child: ButtonTheme(
 
                                             height: 30,
@@ -121,7 +143,7 @@ class check extends StatelessWidget {
                                               },
                                               child: Text("Update",
                                                 style: TextStyle(
-                                                  fontSize: 17,
+                                                  fontSize: 19,
                                                   fontWeight: FontWeight.bold,
                                                   color: Colors.white,
                                                 ),
